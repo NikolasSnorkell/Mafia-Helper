@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Mafia Helper</title>
+</head>
+<body>
+    
+    <div id="container">
+        <div id="block">
+            <div class="slide slide1">
+                <select name="count_players" id="players_amount">
+                    <option value="0">Кол-во игроков</option>
+                </select>
+                <button class="slide1_btn">Применить</button>
+            </div>
+            <br>
+            <div class="slide"><p class="roles_title">Введите нужные роли через пробел</p></div>
+            <br>
+            <div class="slide slide2">
+                
+                <textarea class="slide2_input">Мафия Мафия Комиссар Доктор</textarea>
+                <button class="slide2_btn">Применить</button>
+                <p class="slide2_out"></p>
+            </div>
+<br>
+            <div class="slide slide3">
+               
+                <button class="slide3_btn">Сгенерировать</button>
+                <p class="slide3_output"></p>
+               
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

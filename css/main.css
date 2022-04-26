@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: white;
+}
+
+#container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(to right,#2EC6DA,#3A5390)
+}
+
+#block{
+    width: 500px;
+    height: 400px;
+    padding: 40px;
+    border: 1px solid white;
+    background: rgb(165, 165, 165);
+    box-shadow: 5px 5px 5px black;
+    overflow-y: scroll;
+    background: #2374aa;
+}
+
+#block::-webkit-scrollbar{
+    width: 5px;
+}
+
+#block::-webkit-scrollbar-thumb{
+    background: rgb(0, 0, 0);
+}
+
+
+button{
+    padding: 10px 15px ;
+    margin: 10px;
+    border: 1px solid white;
+    background: transparent;
+    transition: background .3s ease-in-out;
+}
+
+button:hover{
+    cursor: pointer;
+  
+    background:rgba(0, 0, 0, 0.171);
+  
+}
+
+select{
+    padding: 5px 10px ;
+    border: 1px solid white;
+    background: transparent;
+ 
+}
+option{
+    border: 1px solid white;
+    background: #2374aa;
+ 
+}
+
+.slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide3{
+  flex-direction: column;
+}
+
+.slide2_input{
+    padding: 10px;
+    border: 1px solid white;
+    background: transparent;
+    min-height: 120px;
+}
+
+.roles_title{
+    font-size: 20px;
+}
+
+.slide3_output{
+    font-size: 20px;
+    margin-top:20px ;
+}
