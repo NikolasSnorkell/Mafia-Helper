@@ -8,22 +8,32 @@ let amount = 0, roles = [];
 let txt = $(".slide2_input").val();
 roles = txt.split(" ");
 
-$(".slide1_btn").click(function(){
-    amount = $("#players_amount option:selected").val();
+// $(".slide1_btn").click(function(){
+//     amount = $("#players_amount option:selected").val();
    
-    console.log(amount); 
-})
+//     console.log(amount); 
+// })
 
-$(".slide2_btn").click(function(){
-    txt = $(".slide2_input").val();
-    roles.length = 0;
+// $(".slide2_btn").click(function(){
+//     txt = $(".slide2_input").val();
+//     roles.length = 0;
 
-    roles = txt.split(" ");
+//     roles = txt.split(" ");
     
-})
+// })
+
+
 $(".slide3_btn").click(function(){
         $(".slide3_output").html('<p class="lineRoles"><span class="checkVote">Голос.</span><span>Роль</span><span>Умер</span></p>');
        
+        amount = $("#players_amount option:selected").val();
+
+        txt = $(".slide2_input").val();
+        roles.length = 0;
+    
+        roles = txt.split(" ");
+
+
                 
                 for(let k = (amount-roles.length);k>0;k--){
                     roles.push(" ");
