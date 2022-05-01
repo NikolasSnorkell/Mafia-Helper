@@ -8,6 +8,8 @@ let amount = 0, roles = [];
 let txt = $(".slide2_input").val();
 roles = txt.split(" ");
 
+$(".note").fadeOut(0);
+
 // $(".slide1_btn").click(function(){
 //     amount = $("#players_amount option:selected").val();
    
@@ -22,9 +24,11 @@ roles = txt.split(" ");
     
 // })
 
+let flag = 0;
 
 $(".slide3_btn").click(function(){
-        $(".slide3_output").html('<p class="lineRoles"><span class="checkVote">Голос.</span><span>Роль</span><span>Умер</span></p>');
+
+    $(".slide3_output").html('<p class="lineRoles"><span class="checkVote">Голос.</span><span>Роль</span><span>Умер</span></p>');
        
         amount = $("#players_amount option:selected").val();
 
@@ -51,13 +55,50 @@ $(".slide3_btn").click(function(){
 
                 }
                
+              
+               
+               
+                
      
             for(let i = 0;i<roles.length;i++){
+             
+
                 $(".slide3_output").html($(".slide3_output").html()+'<p class="lineRoles"><input type="checkbox" class="vote"><span>'+(i+1)+'. '+roles[i] + '</span><input type="checkbox" class="live"></p>');
+                if(flag==0){
+                    $(".lineRoles").eq(i).slideToggle(0);
+                    setTimeout(function(){
+                        $(".lineRoles").eq(i).slideToggle(300);
+                       },i+"00"); 
+
+                    } else  if(flag==1){
+
+                        $(".lineRoles").not(":first-child").last().css({opacity:"0"});
+                        setTimeout(function(){
+                            $(".lineRoles").eq(i+1).css({opacity:"1"});
+                           },i+"00"); 
+                    }
+
+            //     if(flag==0){
+               
+            //   } else {
+               
+            //   }
+              
+             
             }
-          
+
+
+
+            // if(flag!=0){
+            //     $(".lineRoles").not(":first-child").fadeIn(500);
+            // }
+            
+            flag=1;
                
             $(".live").prop("checked",true);
+
+
+            $(".note").fadeIn(1000);
 
             $(".checkVote").click(function(){
 
@@ -66,4 +107,7 @@ $(".slide3_btn").click(function(){
 
             
 })
+
+
+
 

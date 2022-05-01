@@ -11,8 +11,15 @@
     
     <div id="container">
         <div id="block">
-         
-            <div class="slide"><p class="roles_title">~ Введите нужные роли через пробел ~<br>~ Выберите количество игроков ~<br>~ Нажмите "Сгенерировать" ~</p></div>
+            <div class="slide slide1">
+                <p class="roles_title">~ Выберите количество игроков ~<br></p><br>
+                <select name="count_players" id="players_amount">
+                    <option value="0">Кол-во игроков</option>
+                </select>
+                <!-- <button class="slide1_btn">Применить</button> -->
+            </div>
+            <br>
+            <div class="slide"><p class="roles_title">~ Введите роли через пробел ~<br></p></div>
             <br>
             <div class="slide slide2">
                 
@@ -21,12 +28,7 @@
                 <p class="slide2_out"></p>
             </div>
 <br>
-<div class="slide slide1">
-    <select name="count_players" id="players_amount">
-        <option value="0">Кол-во игроков</option>
-    </select>
-    <!-- <button class="slide1_btn">Применить</button> -->
-</div>
+
 <br>
             <div class="slide slide3">
                
@@ -35,8 +37,12 @@
                 <p class="slide3_output"></p>
                
             </div>
+
+           
         </div>
     </div>
+
+    
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
