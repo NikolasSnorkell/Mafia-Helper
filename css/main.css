@@ -24,7 +24,7 @@ body{
     justify-content: center;
     align-items: center;
   
-    background: linear-gradient(60deg,#e0e0e0 50%,#bb5b8b 50%)
+    background: linear-gradient(60deg,#e0e0e0 50%,#5b85bb 50%)
 }
 
 #block{
@@ -60,7 +60,7 @@ button{
     padding: 10px 15px ;
     margin-bottom: 10px;
     border: 0px solid black;
-    background: #bb5b8b;
+    background: #5b85bb;
     transition: background .3s ease-in-out;
     border-radius: 5px;
     color: white;
@@ -69,7 +69,7 @@ button{
 button:hover{
     cursor: pointer;
   
-    background:#8f4369;
+    background:#44658f;
   
 }
 
@@ -110,7 +110,7 @@ option{
 .roles_title{
     font-size: 24px;
     text-align: center;
-    color: #bb5b8b;
+    color: #5b85bb;
     font-weight: bold;
 }
 
@@ -157,7 +157,7 @@ p{
 }
 
 .checkVote{
-    background: #bb5b8b;
+    background: #5b85bb;
     color: white;
     border-radius: 3px;
 transition: background .3s ease-in-out;
@@ -165,7 +165,7 @@ transition: background .3s ease-in-out;
 
 .checkVote:hover{
     cursor:pointer;
-    background: #9b4b73;
+    background: #5b85bb;
 }
 
 
@@ -184,7 +184,7 @@ input[type='checkbox']{
     z-index: 150;
     width: 20px;
     height: 20px;
-    background: #bb5b8b;
+    background: #5b85bb;
     border-radius: 5px;
 }
 
