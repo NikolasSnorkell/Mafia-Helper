@@ -22,7 +22,7 @@ $(".slide2_btn").click(function(){
     
 })
 $(".slide3_btn").click(function(){
-        $(".slide3_output").html("");
+        $(".slide3_output").html('<p class="lineRoles"><span class="checkVote">Голос.</span><span>Роль</span><span>Умер</span></p>');
        
                 
                 for(let k = (amount-roles.length);k>0;k--){
@@ -43,10 +43,17 @@ $(".slide3_btn").click(function(){
                
      
             for(let i = 0;i<roles.length;i++){
-                $(".slide3_output").html($(".slide3_output").html()+(i+1)+'. '+roles[i] + '<br>');
+                $(".slide3_output").html($(".slide3_output").html()+'<p class="lineRoles"><input type="checkbox" class="vote"><span>'+(i+1)+'. '+roles[i] + '</span><input type="checkbox" class="live"></p>');
             }
           
                
-   
- 
+            $(".live").prop("checked",true);
+
+            $(".checkVote").click(function(){
+
+                $(".vote").prop("checked",false);
+            })
+
+            
 })
+

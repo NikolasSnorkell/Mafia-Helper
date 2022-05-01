@@ -6,6 +6,10 @@
     color: white;
 }
 
+body{
+    overflow: hidden;
+}
+
 #container{
     width: 100vw;
     height: 100vh;
@@ -67,6 +71,7 @@ option{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .slide3{
   flex-direction: column;
@@ -86,4 +91,95 @@ option{
 .slide3_output{
     font-size: 20px;
     margin-top:20px ;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.lineRoles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid white;
+}
+
+.lineRoles:first-child{
+    border-top: 0px solid white;
+}
+
+.lineRoles:first-child span{
+   padding: 5px 10px;
+}
+
+.lineRoles:not(:first-child) span{
+    margin: 3px 10px;
+}
+
+.checkVote{
+    background: rgb(0, 0, 0);
+    border-radius: 3px;
+transition: background .3s ease-in-out;
+}
+
+.checkVote:hover{
+    cursor:pointer;
+    background: rgba(0, 0, 0, 0.432);
+}
+
+
+input[type='checkbox']{
+    width: 20px;
+    height: 20px;
+    user-select: none;
+    position: relative;
+    z-index: 100;
+}
+
+.vote::before{
+    content: '';
+    position: absolute; top: 0;left: 0;
+    z-index: 150;
+    width: 20px;
+    height: 20px;
+    background: black;
+}
+
+.vote::after{
+    content: '';
+    position: absolute; top: 6px;left: 6px;
+    z-index: 150;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    transition: background .3s ease-in-out;
+}
+
+.vote:checked::after{
+    background: rgb(255, 255, 255);
+}
+
+
+.live::before{
+    content: '';
+    position: absolute; top: 0;left: 0;
+    z-index: 150;
+    width: 20px;
+    height: 20px;
+    background: rgb(212, 0, 0);
+}
+
+.live::after{
+    content: '';
+    position: absolute; top: 0px;left: 0px;
+    z-index: 150;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    transition: background .3s ease-in-out;
+}
+
+.live:checked::after{
+    background: rgb(0, 214, 0);
 }
