@@ -249,3 +249,28 @@ input[type='checkbox']{
         font-size: 21px;
     }
 }
+
+
+
+.slide4_output{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.choice_lines{
+    width: 300px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+.choice_lines span{
+    display: flex;
+    column-gap: 10px;
+}
+
+.choice_lines input{
+    width: 25px;
+    text-align: center;
+    font-size: 20px;
+}

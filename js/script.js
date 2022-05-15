@@ -1,12 +1,15 @@
 
+ $(".slide4_output").animate({"opacity":"0"},0);
 
 for(let i=1;i<26;i++){
     $("#players_amount").html($("#players_amount").html()+ ' <option value="'+i+'">'+i+'</option>')
 }
 
-let amount = 0, roles = [];
+let amount = 0, roles = [],roles_choice = [];
 let txt = $(".slide2_input").val();
 roles = txt.split(" ");
+// roles_choice = txt.split(" ");
+roles_choice =Array.from(new Set(roles));
 
 $(".note").fadeOut(0);
 
@@ -29,15 +32,18 @@ let flag = 0;
 $(".slide3_btn").click(function(){
 
     $(".slide3_output").html('<p class="lineRoles"><span class="checkVote">Голос.</span><span>Роль</span><span>Умер</span></p>');
-       
+    $(".slide4_output").html("");
+   
+
+
         amount = $("#players_amount option:selected").val();
 
         txt = $(".slide2_input").val();
         roles.length = 0;
     
         roles = txt.split(" ");
-
-
+        roles_choice = txt.split(" ");
+        roles_choice =Array.from(new Set(roles));
                 
                 for(let k = (amount-roles.length);k>0;k--){
                     roles.push(" ");
@@ -78,15 +84,17 @@ $(".slide3_btn").click(function(){
                            },i+"00"); 
                     }
 
-            //     if(flag==0){
-               
-            //   } else {
-               
-            //   }
+              
+                   
+                    
               
              
             }
 
+            $(".slide4_output").animate({"opacity":"1"},1000);
+            for(let i = 0;i<roles_choice.length;i++){
+                $(".slide4_output").html($(".slide4_output").html()+ '<div class="choice_lines"><p>'+roles_choice[i]+'</p><span><input type="text" maxlength=""><input type="text" maxlength="2"><input type="text" maxlength="2"><input type="text" maxlength="2"><input type="text" maxlength="2"></span></div>');
+            }
 
 
             // if(flag!=0){
